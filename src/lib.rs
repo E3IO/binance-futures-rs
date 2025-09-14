@@ -138,7 +138,7 @@ pub struct BinanceClient {
     http_client: HttpClient,
 }
 
-pub use api::{AccountApi, AdvancedTradingApi, AlgoTradingApi, MarketApi, TradingApi};
+pub use api::{AccountApi, MarketApi, TradingApi};
 pub use client::{Credentials, HttpClient};
 pub use error::{BinanceError, Result};
 pub use types::*;
@@ -189,15 +189,6 @@ impl BinanceClient {
         AccountApi::new(self.http_client.clone())
     }
 
-    /// Get advanced trading API client
-    pub fn advanced_trading(&self) -> AdvancedTradingApi {
-        AdvancedTradingApi::new(self.http_client.clone())
-    }
-
-    /// Get algorithmic trading API client
-    pub fn algo_trading(&self) -> AlgoTradingApi {
-        AlgoTradingApi::new(self.http_client.clone())
-    }
 
     /// Get HTTP client (for advanced usage)
     pub fn http_client(&self) -> &HttpClient {
