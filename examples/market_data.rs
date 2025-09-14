@@ -3,7 +3,7 @@
 //! This example demonstrates how to fetch market data from Binance Futures API.
 //! No authentication is required for these endpoints.
 
-use binance_fu_rs::{BinanceClient, KlineInterval};
+use binance_futures_rs::{BinanceClient, KlineInterval};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {

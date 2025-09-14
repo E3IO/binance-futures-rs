@@ -39,7 +39,7 @@ impl AdvancedTradingApi {
     /// # Example
     /// 
     /// ```rust,no_run
-    /// use binance_fu_rs::{BinanceClient, Credentials, OrderSide, PositionSide};
+    /// use binance_futures_rs::{BinanceClient, Credentials, OrderSide, PositionSide};
     /// 
     /// # async fn example() -> Result<(), Box<dyn std::error::Error>> {
     /// let credentials = Credentials::new("api_key".to_string(), "secret".to_string());

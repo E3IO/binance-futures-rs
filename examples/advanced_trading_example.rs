@@ -6,7 +6,7 @@
 //! - OCO (One-Cancels-Other) orders
 //! - Order replacement strategies
 
-use binance_fu_rs::{
+use binance_futures_rs::{
     BinanceClient, Credentials, OrderSide, OrderType, PositionSide,
     api::advanced_trading::BracketOrderConfig,
 };

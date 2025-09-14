@@ -1,4 +1,4 @@
-use binance_fu_rs::{
+use binance_futures_rs::{
     BinanceClient, Credentials, Result,
     websocket::{StreamBuilder, UserDataStream, UserDataStreamConfig, WebSocketClient, WebSocketMessage},
 };

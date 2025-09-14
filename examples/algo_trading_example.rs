@@ -7,7 +7,7 @@
 //! - VWAP (Volume Weighted Average Price) execution
 //! - Position sizing calculations
 
-use binance_fu_rs::{
+use binance_futures_rs::{
     BinanceClient, Credentials, OrderSide, PositionSide,
     api::algo_trading::{DcaConfig, GridTradingConfig, TwapConfig, VwapConfig, PositionSizingConfig},
 };

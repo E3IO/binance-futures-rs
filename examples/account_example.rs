@@ -3,7 +3,7 @@
 //! This example demonstrates how to fetch account information from Binance Futures API.
 //! Requires valid API credentials.
 
-use binance_fu_rs::{BinanceClient, Credentials};
+use binance_futures_rs::{BinanceClient, Credentials};
 use std::env;
 
 #[tokio::main]

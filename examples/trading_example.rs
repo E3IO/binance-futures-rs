@@ -4,7 +4,7 @@
 //! IMPORTANT: This requires valid API credentials and will place actual orders on testnet.
 //! Make sure to use testnet credentials for testing.
 
-use binance_fu_rs::{
+use binance_futures_rs::{
     BinanceClient, Credentials, NewOrderRequest, CancelOrderRequest, QueryOrderRequest,
     OrderSide, OrderType, TimeInForce, PositionSide
 };

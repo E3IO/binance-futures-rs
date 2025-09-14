@@ -37,8 +37,8 @@ impl AlgoTradingApi {
     /// # Example
     /// 
     /// ```rust,no_run
-    /// use binance_fu_rs::{BinanceClient, Credentials};
-    /// use binance_fu_rs::api::algo_trading::{DcaConfig, OrderSide};
+    /// use binance_futures_rs::{BinanceClient, Credentials};
+    /// use binance_futures_rs::api::algo_trading::{DcaConfig, OrderSide};
     /// use std::time::Duration;
     /// 
     /// # async fn example() -> Result<(), Box<dyn std::error::Error>> {

@@ -19,7 +19,7 @@
 //! ### Public Market Data
 //!
 //! ```rust,no_run
-//! use binance_fu_rs::BinanceClient;
+//! use binance_futures_rs::BinanceClient;
 //!
 //! #[tokio::main]
 //! async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -40,7 +40,7 @@
 //! ### Authenticated Trading
 //!
 //! ```rust,no_run
-//! use binance_fu_rs::{BinanceClient, Credentials, OrderSide, OrderType, TimeInForce};
+//! use binance_futures_rs::{BinanceClient, Credentials, OrderSide, OrderType, TimeInForce};
 //!
 //! #[tokio::main]
 //! async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -69,7 +69,7 @@
 //! ### WebSocket Streams
 //!
 //! ```rust,no_run
-//! use binance_fu_rs::websocket::{StreamBuilder, WebSocketClient, WebSocketMessage};
+//! use binance_futures_rs::websocket::{StreamBuilder, WebSocketClient, WebSocketMessage};
 //! use futures_util::StreamExt;
 //!
 //! #[tokio::main]
@@ -100,7 +100,7 @@
 //! ## Quick Start
 //!
 //! ```rust,no_run
-//! use binance_fu_rs::{BinanceClient, Credentials};
+//! use binance_futures_rs::{BinanceClient, KlineInterval};
 //!
 //! #[tokio::main]
 //! async fn main() -> Result<(), Box<dyn std::error::Error>> {

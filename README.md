@@ -23,7 +23,7 @@
 
 ```toml
 [dependencies]
-binance-fu-rs = "0.1.0"
+binance-futures-rs = "0.1.0"
 tokio = { version = "1.0", features = ["full"] }
 ```
 
@@ -32,7 +32,7 @@ tokio = { version = "1.0", features = ["full"] }
 ### 市场数据（无需认证）
 
 ```rust
-use binance_fu_rs::{BinanceClient, KlineInterval};
+use binance_futures_rs::{BinanceClient, KlineInterval};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -62,7 +62,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### 交易功能（需要认证）
 
 ```rust
-use binance_fu_rs::{
+use binance_futures_rs::{
     BinanceClient, Credentials, NewOrderRequest,
     OrderSide, OrderType, TimeInForce
 };
@@ -98,7 +98,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 ### 账户信息
 
 ```rust
-use binance_fu_rs::{BinanceClient, Credentials};
+use binance_futures_rs::{BinanceClient, Credentials};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -192,7 +192,7 @@ let client = BinanceClient::testnet_with_credentials(credentials);
 库提供了详细的错误类型：
 
 ```rust
-use binance_fu_rs::{BinanceError, Result};
+use binance_futures_rs::{BinanceError, Result};
 
 match client.market().price_ticker(Some("BTCUSDT")).await {
     Ok(price) => println!("价格: {}", price[0].price),
