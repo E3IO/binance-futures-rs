@@ -2,10 +2,10 @@
 name = "binance-futures-rs"
 version = "0.1.1"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Differs <differs@telegraphs.org>"]
 description = "A Rust client library for Binance Futures API"
 license = "MIT"
-repository = "https://github.com/yourusername/binance-futures-rs"
+repository = "https://github.com/E3IO/binance-futures-rs"
 keywords = ["binance", "futures", "trading", "cryptocurrency", "api"]
 categories = ["api-bindings", "finance"]
 documentation = "https://docs.rs/binance-futures-rs"
