@@ -239,7 +239,7 @@ impl AdvancedTradingApi {
         limit_params.insert("price".to_string(), price.to_string());
         limit_params.insert("timeInForce".to_string(), TimeInForce::Gtc.to_string());
 
-        if let Some(ps) = position_side {
+        if let Some(ref ps) = position_side {
             limit_params.insert("positionSide".to_string(), ps.to_string());
         }
 
@@ -266,7 +266,7 @@ impl AdvancedTradingApi {
             stop_params.insert("price".to_string(), slp.to_string());
         }
 
-        if let Some(ps) = position_side {
+        if let Some(ref ps) = position_side {
             stop_params.insert("positionSide".to_string(), ps.to_string());
         }
 

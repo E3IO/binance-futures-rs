@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 use std::fmt;
 
 /// Order side
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum OrderSide {
     Buy,
@@ -19,7 +19,7 @@ impl fmt::Display for OrderSide {
 }
 
 /// Order type
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum OrderType {
     Limit,
@@ -46,7 +46,7 @@ impl fmt::Display for OrderType {
 }
 
 /// Time in force
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum TimeInForce {
     Gtc, // Good Till Cancel
@@ -67,7 +67,7 @@ impl fmt::Display for TimeInForce {
 }
 
 /// Position side
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum PositionSide {
     Both,
@@ -86,7 +86,7 @@ impl fmt::Display for PositionSide {
 }
 
 /// Working type
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum WorkingType {
     MarkPrice,
@@ -94,7 +94,7 @@ pub enum WorkingType {
 }
 
 /// Order status
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "UPPERCASE")]
 pub enum OrderStatus {
     New,
@@ -106,7 +106,7 @@ pub enum OrderStatus {
 }
 
 /// Kline interval
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq)]
 pub enum KlineInterval {
     #[serde(rename = "1m")]
     OneMinute,

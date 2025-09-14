@@ -90,10 +90,11 @@ impl AlgoTradingApi {
             });
         }
 
+        let total_executed = self.calculate_total_executed(&orders);
         Ok(DcaResult {
             total_orders: orders.len(),
             orders,
-            total_executed_amount: self.calculate_total_executed(&orders),
+            total_executed_amount: total_executed,
         })
     }
 
@@ -157,7 +158,7 @@ impl AlgoTradingApi {
             let order = self.place_market_order(
                 &config.symbol,
                 config.side,
-                &slice_size,
+                &slice_size.to_string(),
                 config.position_side,
             ).await?;
 
@@ -170,11 +171,13 @@ impl AlgoTradingApi {
             });
         }
 
+        let average_price = self.calculate_twap_average_price(&orders);
+        let total_executed_quantity = self.calculate_total_quantity(&orders);
         Ok(TwapResult {
             total_slices: orders.len(),
             orders,
-            average_price: self.calculate_twap_average_price(&orders),
-            total_executed_quantity: self.calculate_total_quantity(&orders),
+            average_price,
+            total_executed_quantity,
         })
     }
 
@@ -227,11 +230,13 @@ impl AlgoTradingApi {
             });
         }
 
+        let vwap_price = self.calculate_vwap_price(&orders);
+        let total_executed_quantity = self.calculate_total_quantity(&orders);
         Ok(VwapResult {
             total_slices: orders.len(),
             orders,
-            vwap_price: self.calculate_vwap_price(&orders),
-            total_executed_quantity: self.calculate_total_quantity(&orders),
+            vwap_price,
+            total_executed_quantity,
             remaining_quantity: remaining_quantity.to_string(),
         })
     }
